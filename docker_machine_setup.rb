@@ -31,7 +31,7 @@ if ask?("ブリッジネットワーク設定しますか?(y/n)") =~ /y/
       bridgedifs.each_with_index do |b, i|
         puts "#{i}) #{b}"
       end
-      n = ask?
+      n = ask?.to_i
 
       res = ask?("#{bridgedifs[n]} でいいですか? (y/n)").chop
       return n if res =~ /y/
