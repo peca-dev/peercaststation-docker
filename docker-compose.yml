@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  peercaststation:
+    build:
+      context: ./
+      args:
+        VERSION: 2.9.4
+    image: peca-dev/peercaststation:2.9.4
+    expose:
+      - 7144
+      - 1935
+    volumes:
+      - ./config:/root/.config/PeerCastStation
+    network_mode: host
