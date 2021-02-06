@@ -1,4 +1,4 @@
-FROM mono:latest
+FROM mono:6.10
 
 ARG VERSION
 ENV PORT=7144
